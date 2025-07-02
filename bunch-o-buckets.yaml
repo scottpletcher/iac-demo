@@ -1,0 +1,60 @@
+AWSTemplateFormatVersion: '2010-09-09'
+# Description: 'Parent template for nested stacks demonstrating S3 bucket drift'
+
+Parameters:
+  StandardBucketTemplateURL:
+    Type: String
+    Default: "https://scottpletcher-iac-reuse.s3.us-east-2.amazonaws.com/standard_bucket.yaml"
+    Description: "URL to the standard bucket template"
+
+Resources: 
+  Bucket1:
+    Type: 'AWS::CloudFormation::Stack'
+    Properties:
+      TemplateURL: {Ref: StandardBucketTemplateURL}
+
+  Bucket2:
+    Type: 'AWS::CloudFormation::Stack'
+    Properties:
+      TemplateURL: {Ref: StandardBucketTemplateURL}
+
+  Bucket3:
+    Type: 'AWS::CloudFormation::Stack'
+    Properties:
+      TemplateURL: {Ref: StandardBucketTemplateURL}
+
+  Bucket4:
+    Type: 'AWS::CloudFormation::Stack'
+    Properties:
+      TemplateURL: {Ref: StandardBucketTemplateURL}
+
+  Bucket5:
+    Type: 'AWS::CloudFormation::Stack'
+    Properties:
+      TemplateURL: {Ref: StandardBucketTemplateURL}
+
+  Bucket6:
+    Type: 'AWS::CloudFormation::Stack'
+    Properties:
+      TemplateURL: {Ref: StandardBucketTemplateURL}
+
+  Bucket7:
+    Type: 'AWS::CloudFormation::Stack'
+    Properties:
+      TemplateURL: {Ref: StandardBucketTemplateURL}
+
+  Bucket8:
+    Type: 'AWS::CloudFormation::Stack'
+    Properties:
+      TemplateURL: {Ref: StandardBucketTemplateURL}
+
+  Bucket9:
+    Type: 'AWS::CloudFormation::Stack'
+    Properties:
+      TemplateURL: {Ref: StandardBucketTemplateURL}
+
+  Bucket10:
+    Type: 'AWS::CloudFormation::Stack'
+    Properties:
+      TemplateURL: {Ref: StandardBucketTemplateURL}
+
